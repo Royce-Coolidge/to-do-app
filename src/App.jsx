@@ -13,22 +13,22 @@ function App() {
 
       let board = {
         id: 1,
-        name: "",
+        name: "Hello",
         lists: []
       }
       setBoard(boards => [...boards, board])
     }
 
-console.log(boards)
+
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header bg-green-50">
         <CreateBoard createBoard={createBoard} />
         <div className={`fixed top-0 p-4 w-full grid grid-cols-1 gap-4 sm:grid-cols-${boards.length ?? 1}`}>
         {
           boards.length > 0 && boards.map((board, i) => {
-            return <Board key={i} name={board.name} />
+            return <Board  />
           })}
           </div>
       </header>
